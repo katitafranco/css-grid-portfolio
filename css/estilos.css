@@ -73,3 +73,8 @@ body {
 .superpuesto.blanco {
   color: white;
 }
+
+.footer {
+  text-align: center;
+  padding: 64px;
+}
