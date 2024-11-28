@@ -37,7 +37,7 @@ body {
 }
 
 .proyecto {
-  width: 500px;
+  /*  width: 500px; */
   position: relative;
 }
 
@@ -77,4 +77,54 @@ body {
 .footer {
   text-align: center;
   padding: 64px;
+}
+
+.proyectos {
+  display: grid;
+  /* height: 700px; */
+  grid-template-areas:
+    "apt apt hom1"
+    "apt apt hom1"
+    "hom2 hom3 hom4"
+    "hom2 hom3 hom4"
+    "hom5 hom6 hom6"
+    "hom5 hom6 hom6"
+    "hom7 hom7 hom8"
+    "hom7 hom7 hom8";
+  width: 100%;
+  grid-gap: 16px;
+}
+
+#apartamento {
+  grid-area: apt;
+}
+
+#casa1 {
+  grid-area: hom1;
+}
+
+#casa2 {
+  grid-area: hom2;
+}
+
+#casa3 {
+  grid-area: hom3;
+}
+
+#casa4 {
+  grid-area: hom4;
+}
+#casa5 {
+  grid-area: hom5;
+}
+
+#casa6 {
+  grid-area: hom6;
+}
+#casa7 {
+  grid-area: hom7;
+}
+
+#casa8 {
+  grid-area: hom8;
 }
