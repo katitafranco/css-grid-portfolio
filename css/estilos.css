@@ -9,6 +9,7 @@ body {
 .container {
   max-width: 90%;
   margin: 0 auto;
+  padding: 0 16px;
 }
 .navbar {
   display: flex;
@@ -34,6 +35,68 @@ body {
 
 .navbar .right a:hover {
   text-decoration: underline;
+}
+
+/* Boton responsive menu */
+.navbar .bar {
+  background-color: black;
+  height: 4px;
+  width: 36px;
+  margin: 3px;
+  border-radius: 10px;
+}
+
+.navbar .hamburguer {
+  display: none;
+}
+.proyectos {
+  display: grid;
+  /* height: 700px; */
+  grid-template-areas:
+    "apt apt hom1"
+    "apt apt hom1"
+    "hom4 hom3 hom2"
+    /*  "hom2 hom3 hom4" */
+    "hom5 hom6 hom6"
+    "hom5 hom6 hom6"
+    "hom7 hom7 hom8"
+    "hom7 hom7 hom8";
+  width: 100%;
+  grid-gap: 16px;
+}
+
+#apartamento {
+  grid-area: apt;
+}
+
+#casa1 {
+  grid-area: hom1;
+}
+
+#casa2 {
+  grid-area: hom2;
+}
+
+#casa3 {
+  grid-area: hom3;
+}
+
+#casa4 {
+  grid-area: hom4;
+}
+#casa5 {
+  grid-area: hom5;
+}
+
+#casa6 {
+  grid-area: hom6;
+}
+#casa7 {
+  grid-area: hom7;
+}
+
+#casa8 {
+  grid-area: hom8;
 }
 
 .proyecto {
@@ -79,52 +142,76 @@ body {
   padding: 64px;
 }
 
-.proyectos {
-  display: grid;
-  /* height: 700px; */
-  grid-template-areas:
-    "apt apt hom1"
-    "apt apt hom1"
-    "hom2 hom3 hom4"
-    "hom2 hom3 hom4"
-    "hom5 hom6 hom6"
-    "hom5 hom6 hom6"
-    "hom7 hom7 hom8"
-    "hom7 hom7 hom8";
-  width: 100%;
-  grid-gap: 16px;
+/* Responsive - Media Queries */
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .proyectos {
+    display: grid;
+    grid-template-areas:
+      "apt apt "
+      "hom1 hom2"
+      "hom4 hom3 "
+      "hom6 hom6 "
+      "hom5 hom7 "
+      "hom8 hom8 ";
+  }
 }
 
-#apartamento {
-  grid-area: apt;
-}
+/* Responsive - Media Queries -Telefono */
 
-#casa1 {
-  grid-area: hom1;
-}
+@media only screen and (max-width: 768px) {
+  /* .container {
+    max-width: 100%;
+  } */
 
-#casa2 {
-  grid-area: hom2;
-}
+  .proyectos {
+    margin: 0;
+    margin-top: 100px;
+  }
+  .navbar {
+    padding: 16px 24px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: white;
+    width: 100%;
+  }
+  .navbar .right {
+    display: none;
+  }
+  /* Aparecer el menu hamburguesa*/
+  .navbar .hamburguer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .proyectos {
+    display: grid;
+    grid-template-areas:
+      "apt apt "
+      "hom1 hom1"
+      "hom2 hom2 "
+      "hom4 hom3 "
+      "hom6 hom6 "
+      "hom5 hom5 "
+      "hom7 hom7"
+      "hom8 hom8";
+  }
+  .proyecto .superpuesto {
+    font-size: 24px;
+    text-align: center;
+  }
 
-#casa3 {
-  grid-area: hom3;
-}
-
-#casa4 {
-  grid-area: hom4;
-}
-#casa5 {
-  grid-area: hom5;
-}
-
-#casa6 {
-  grid-area: hom6;
-}
-#casa7 {
-  grid-area: hom7;
-}
-
-#casa8 {
-  grid-area: hom8;
+  .footer {
+    font-size: 14px;
+    padding: 32px;
+  }
 }
